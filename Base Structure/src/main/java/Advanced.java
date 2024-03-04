@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Objects;
 
 public class Advanced {
@@ -11,9 +12,10 @@ public class Advanced {
      */
     public String wordCensor(String sentence, String word, String newWord){
 
+        String answer = sentence.replace( word, newWord);
 
 
-        return null;
+        return answer;
     }
 
     /**
@@ -23,9 +25,28 @@ public class Advanced {
      * @return fullName is a normal full name that just the first letter of firstName & lastName is Capitalized (example : Harry Potter)
      */
     public String normalizingName(String firstName, String lastName){
+char c , d;
+int a, b;
+       firstName = firstName.toLowerCase(Locale.ROOT);
+       lastName = lastName.toLowerCase(Locale.ROOT);
+       if((int)firstName.charAt(0)>= 97 || (int)firstName.charAt(0)<= 122){
+            a = (int)firstName.charAt(0) - 32;
+       }
+
+            c = (char) a;
+
+        if((int)lastName.charAt(0)>= 97 || (int)lastName.charAt(0)<= 122)
+        {
+            b = (int)lastName.charAt(0) - 32;
+             d = (char) b;
+        }
+firstName.replace(firstName.charAt(0), c);
+        lastName.replace(lastName.charAt(0), d);
 
 
-        return null;
+       String answer = firstName +" "+ lastName;
+
+        return answer;
     }
 
     /**
@@ -34,6 +55,13 @@ public class Advanced {
      * @return if word contains Consecutive repeated letters, one of the repeated letters should be omitted
      */
     public String doubleChar(String word) {
+        for (int i=0; i<word.length(); i++)
+        {
+            if (word.charAt(i) == word.charAt(i+1))
+            {
+                String wordnew = word.replace(word.charAt(i) , "")
+            }
+        }
         return null;
     }
 }
