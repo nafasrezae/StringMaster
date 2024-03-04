@@ -10,6 +10,9 @@ public class Advanced {
 
      */
     public String wordCensor(String sentence, String word, String newWord){
+
+
+
         return null;
     }
 
@@ -20,6 +23,8 @@ public class Advanced {
      * @return fullName is a normal full name that just the first letter of firstName & lastName is Capitalized (example : Harry Potter)
      */
     public String normalizingName(String firstName, String lastName){
+
+
         return null;
     }
 
